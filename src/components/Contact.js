@@ -52,7 +52,7 @@ function Contact() {
                     <p>Glory Glory Man United!</p>
                     <div className='logos'>
                         <img src={insta} alt="insta logo" onClick={() => openInNewTab('https://www.instagram.com/dayanamoralesl/?hl=en')}/>
-                        <img src={facebook} alt="fb logo" onClick={() => openInNewTab('https://www.facebook.com/DayanaMoralesActress')}/>
+                        <img src={facebook} alt="fb logo" onClick={() => openInNewTab('https://www.facebook.com/dayanamoralesl.actress')}/>
                         <img src={youtube} alt='youtube logo' onClick={() => openInNewTab('https://www.youtube.com/channel/UC5KN5vyf29aOiKHwGfyUMSQ/videos')}/>
                     </div>
                 </div>
