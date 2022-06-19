@@ -1,0 +1,81 @@
+.about{
+    height:50vh;
+    width:100vw;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #333d4b;
+    margin-bottom: 10vh
+}
+
+.resume-button {
+    padding: .5rem 1rem;
+    font-size: .8rem;
+    border: none;
+    background-color: white;
+    border: 1px solid black;
+    cursor:pointer;
+    color: black;
+    width: 15vh;
+
+}
+
+.resume-button:hover {
+    background-color: rgba(255, 255, 255, 0.832);
+}
+
+.download-resume-outer {
+    background-color: #333d4b;
+    border-radius: .2rem;
+}
+
+.download-resume {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: .2rem .5rem;
+    cursor: pointer;
+    border-radius: .2rem;
+    transition: .5s;
+}
+
+.download-resume:hover {
+    background: rgba(255, 255, 255, 0.736);
+    transition: .5s;
+}
+
+.download-resume a{
+    text-decoration: none;
+    color: #333d4b;
+    margin-right:.5rem;
+    font-weight: 600;
+}
+
+.download-resume img {
+    width: 30px;
+}
+
+.headshot-div {
+    height: 100%;
+    border-right: 3px solid white;
+}
+
+.headshot-div img {
+    cursor: pointer;
+    height: 100%;
+    width: 40vh;
+}
+
+.banner-about-div{
+    height: 80%;
+    padding : 0 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+    line-height: 1.5rem;
+  
+}

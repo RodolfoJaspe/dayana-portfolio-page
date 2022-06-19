@@ -1,0 +1,57 @@
+.resume-popup-outer{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #333d4bd9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.resume-popup-inner {
+    position: relative;
+    /* width: 65vw; */
+    height: 90%;
+    /* padding: 5%; */
+    /* background: rgba(255, 255, 255, 0.733); */
+    border-radius: 1vw;
+    /* overflow-y: scroll; */
+    scroll-behavior: smooth;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.resume-popup-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.302);
+    border: 1px solid gray;
+}
+
+.resume-popup-button:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.resume-popup-inner img{
+    object-fit: contain;
+    height:100%;
+}
+
+.document {
+    height: 100%;
+    border-radius: 1vw;
+}
