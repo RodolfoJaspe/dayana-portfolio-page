@@ -6,9 +6,9 @@
     justify-content: space-between;
     background-color: #333d4b;
 }
-.headshot-div {
+.contact .headshot-div {
     height: 100%;
-    border-right: 3px solid white;
+    border-left: 3px solid white;
 }
 
 .headshot-div img {
@@ -19,7 +19,7 @@
 
 .banner-contact-div{
     width:100%;
-    height: 80%;
+    height: 100%;
     padding : 0 5vh;
     display: flex;
     flex-direction: column;
@@ -43,16 +43,19 @@
     align-items: flex-start;
     justify-content: space-evenly;
     /* background-color: red; */
-    width:50%;
+    width:40%;
     height:35vh;
 }
 
 .input {
-    width: 100%
+    width: 100%;
+    font-family: Louis George Cafe;
+    border-radius: .2rem;
+    border: none;
 }
 
 .input.message{
-    height:10vh;
+    height:15vh;
 }
 
 .submit-button-div{
@@ -69,7 +72,7 @@
 }
 
 .submit-button-div input:hover {
-    background-color: rgba(255, 255, 255, 0.433);
+    background-color: rgb(121, 158, 172);
     cursor: pointer;
     color:white;
     transition: .3s;
@@ -82,16 +85,30 @@
 
 .logos img{
     width: 40px;
-    transition: .5s;
+    transition: .3s;
 }
 .logos img:hover{
     cursor:pointer;
     transform: scale(1.5);
-    transition: .5s;
+    transition: .3s;
 }
 .socials{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     width:50%;
+}
+
+.profiles {
+    display: flex;
+    flex-direction: column;
+}
+
+.profiles a{
+    color: white;
+    text-decoration: none;
+}
+
+.profiles a:hover{
+    color: rgb(121, 158, 172);
 }

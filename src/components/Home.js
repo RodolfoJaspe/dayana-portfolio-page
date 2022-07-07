@@ -1,13 +1,15 @@
 import React from 'react'
 import '../styles/Home.css';
-import {bannerImg} from "../Assets/images.js";
+import {pageImages} from "../Assets/images.js";
 
 function Home() {
+
+    const image = pageImages.find(image => image.id === 1)
   return (
     <div className='home'>
-        <img src={bannerImg} alt="drive image"/>
+        <img src={image.url} alt="drive image"/>
         <div className='h1-div'>
-           <h1>Dayana Morales</h1> 
+            <div className='first-name'>D A Y A N A</div><div className='last-name'>M O R A L E S</div>
         </div>
     </div>
   )

@@ -1,61 +1,28 @@
-import React,{useState} from 'react';
+import React from 'react';
 import "../styles/Slider.css";
-import BtnSlider from './BtnSlider';
-import ImagePopup from './ImagePopup.js';
+import AliceCarousel from 'react-alice-carousel';
 
+export default function Slider({images, triggerPopup}) {
 
-export default function Slider({images}) {
+    const handleDragStart = (e) => e.preventDefault();
 
-    const [popup, setPopup] = useState(false)
-    const [popupImage, setPopupImage] = useState("")
+    const pictures = images.map(image => (
+        <div onClick={()=>triggerPopup(image)}>
+            <img className="slider-image" src={image.url} alt={image.title} onDragStart={handleDragStart} role="presentation"/>
+        </div>
+    )) 
 
-    const triggerPopup = (image) => {
-        setPopup(!popup)
-        setPopupImage(image)
-    }
-
-
-    const [slideIndex, setSlideIndex] = useState(1)
-
-    const nextSlide = () => {
-        if(slideIndex !== images.length){
-            setSlideIndex(slideIndex + 1)
-        } else if (slideIndex === images.length){
-            setSlideIndex(1)
-        }
-    }
-
-    const prevSlide = () => {
-        if(slideIndex !== 1){
-            setSlideIndex(slideIndex - 1)
-        } else if (slideIndex === 1){
-            setSlideIndex(images.length)
-        }
-    }
-
-    const moveDot = (index) => {
-        setSlideIndex(index)
-    }
+console.log(pictures)
   return (
-    <div className='container-slider'>
-        {images.map((image, index) => {
-            return(
-                <div className={slideIndex === index + 1?'slide active-anim': 'slide'} key={image.id}>
-                    <img onClick={()=>triggerPopup(image)}src={image.url} />
-                    <BtnSlider moveSlide={nextSlide} direction={"next"}/>
-                    <BtnSlider moveSlide={prevSlide} direction={"prev"}/>
-                    <div className='container-dots'>
-                        {Array.from({length:images.length}).map((item,index)=> (
-                            <div 
-                            className={slideIndex === index + 1?'dot active': 'dot'}
-                            onClick={()=> moveDot(index + 1)}></div>
-                        ))}
-                    </div>
-                </div>
-                
-            )
-        })}
-        {popup?<ImagePopup popup={popup} setPopup={setPopup} image={popupImage}/>:null}
-    </div>
+    <AliceCarousel 
+        mouseTracking 
+        items={pictures}
+        className="slider"
+        animationDuration={800}
+        infinite
+        keyboardNavigation
+        animationType="fadeout" 
+        controlsStrategy="alternate"
+        />
   )
 }

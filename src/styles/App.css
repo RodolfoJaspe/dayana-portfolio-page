@@ -3,7 +3,7 @@
   display:flex;
   align-items: center;
   flex-direction: column;
-  font-family: serif;
+  font-family: Louis George Cafe;
 }
 
 .main-content {
@@ -15,5 +15,84 @@
 }
 
 button {
-    font-family: serif;
+    font-family: Louis George Cafe;
 }
+
+@font-face {
+    font-family: 'Louis George Cafe';
+    src: url('../Assets/fonts/louisgeorge/LouisGeorgeCafe-Bold.eot');
+    src: url('../Assets/fonts/louisgeorge/LouisGeorgeCafe-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../Assets/fonts/louisgeorge/LouisGeorgeCafe-Bold.woff2') format('woff2'),
+        url('../Assets/fonts/louisgeorge/LouisGeorgeCafe-Bold.woff') format('woff'),
+        url('../Assets/fonts/louisgeorge/LouisGeorgeCafe-Bold.ttf') format('truetype'),
+        url('../Assets/fonts/louisgeorge/LouisGeorgeCafe-Bold.svg#LouisGeorgeCafe-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Louis George Cafe';
+    src: url('../Assets/fonts/louisgeorge/LouisGeorgeCafe-Italic.eot');
+    src: url('../Assets/fonts/louisgeorge/LouisGeorgeCafe-Italic.eot?#iefix') format('embedded-opentype'),
+        url('../Assets/fonts/louisgeorge/LouisGeorgeCafe-Italic.woff2') format('woff2'),
+        url('../Assets/fonts/louisgeorge/LouisGeorgeCafe-Italic.woff') format('woff'),
+        url('../Assets/fonts/louisgeorge/LouisGeorgeCafe-Italic.ttf') format('truetype'),
+        url('../Assets/fonts/louisgeorge/LouisGeorgeCafe-Italic.svg#LouisGeorgeCafe-Italic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Louis George Cafe';
+    src: url('../Assets/fonts/louisgeorge/LouisGeorgeCafeLight-.eot');
+    src: url('../Assets/fonts/louisgeorge/LouisGeorgeCafeLight-.eot?#iefix') format('embedded-opentype'),
+        url('../Assets/fonts/louisgeorge/LouisGeorgeCafeLight-.woff2') format('woff2'),
+        url('../Assets/fonts/louisgeorge/LouisGeorgeCafeLight-.woff') format('woff'),
+        url('../Assets/fonts/louisgeorge/LouisGeorgeCafeLight-.ttf') format('truetype'),
+        url('../Assets/fonts/louisgeorge/LouisGeorgeCafeLight-.svg#LouisGeorgeCafeLight-') format('svg');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Louis George Cafe';
+    src: url('../Assets/fonts/louisgeorge/LouisGeorgeCafe-BoldItalic.eot');
+    src: url('../Assets/fonts/louisgeorge/LouisGeorgeCafe-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('../Assets/fonts/louisgeorge/LouisGeorgeCafe-BoldItalic.woff2') format('woff2'),
+        url('../Assets/fonts/louisgeorge/LouisGeorgeCafe-BoldItalic.woff') format('woff'),
+        url('../Assets/fonts/louisgeorge/LouisGeorgeCafe-BoldItalic.ttf') format('truetype'),
+        url('../Assets/fonts/louisgeorge/LouisGeorgeCafe-BoldItalic.svg#LouisGeorgeCafe-BoldItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Louis George Cafe';
+    src: url('../Assets/fonts/louisgeorge/LouisGeorgeCafeLight-_1.eot');
+    src: url('../Assets/fonts/louisgeorge/LouisGeorgeCafeLight-_1.eot?#iefix') format('embedded-opentype'),
+        url('../Assets/fonts/louisgeorge/LouisGeorgeCafeLight-_1.woff2') format('woff2'),
+        url('../Assets/fonts/louisgeorge/LouisGeorgeCafeLight-_1.woff') format('woff'),
+        url('../Assets/fonts/louisgeorge/LouisGeorgeCafeLight-_1.ttf') format('truetype'),
+        url('../Assets/fonts/louisgeorge/LouisGeorgeCafeLight-_1.svg#LouisGeorgeCafeLight-@') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Louis George Cafe';
+    src: url('../Assets/fonts/louisgeorge/LouisGeorgeCafe.eot');
+    src: url('../Assets/fonts/louisgeorge/LouisGeorgeCafe.eot?#iefix') format('embedded-opentype'),
+        url('../Assets/fonts/louisgeorge/LouisGeorgeCafe.woff2') format('woff2'),
+        url('../Assets/fonts/louisgeorge/LouisGeorgeCafe.woff') format('woff'),
+        url('../Assets/fonts/louisgeorge/LouisGeorgeCafe.ttf') format('truetype'),
+        url('../Assets/fonts/louisgeorge/LouisGeorgeCafe.svg#LouisGeorgeCafe') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

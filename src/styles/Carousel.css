@@ -1,6 +1,6 @@
-.slider-image{
-    height: 600px;
-    width:450px;
+.carousel-image{
+    height: 400px;
+    width:350px;
     object-fit: cover;
     object-position: top;
     transition: 1s;    
@@ -251,4 +251,31 @@
   .alice-carousel__slide-info-item {
     vertical-align: middle;
     line-height: 0;
+  }
+
+  @media(max-width:1600px){
+    .alice-carousel__prev-btn {
+        left: 35px;
+    }
+    .alice-carousel__next-btn {
+        right: 35px;
+    }
+  }
+
+  @media(max-width:1200px){
+    .alice-carousel__prev-btn {
+        left: 55px;
+    }
+    .alice-carousel__next-btn {
+        right: 55px;
+    }
+  }
+
+  @media(max-width:1200px){
+    .alice-carousel__prev-btn {
+        left: 55px;
+    }
+    .alice-carousel__next-btn {
+        right: 55px;
+    }
   }

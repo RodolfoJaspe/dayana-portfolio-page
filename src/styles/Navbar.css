@@ -29,13 +29,11 @@
 }
 
 .nav-item.active {
-    border-bottom: 3px solid red;
     font-size: 1.8rem;
     transition: 1s;
 }
 
 .nav-item:hover {
-    border-bottom: 3px solid red;
     font-size: 1.4rem;
     transition: 1s;
 }

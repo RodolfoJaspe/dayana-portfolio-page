@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import '../styles/About.css';
 import ResumePopup from './ResumePopup';
 import ImagePopup from './ImagePopup';
-import {headshotImages} from "../Assets/images.js";
+import {pageImages} from "../Assets/images.js";
 import "../styles/ImagePopup.css";
 
 function About() {
@@ -24,11 +24,11 @@ function About() {
         setNumPages(numPages);
       }
 
-    const headshot = headshotImages.filter(image => image.id === 6)
+    const headshot = pageImages.find(image => image.id === 2)
   return (
     <div className='about'>
         <div className='headshot-div'>
-          <img onClick={() => triggerPopup(headshot[0])}src={headshot[0].url} alt='headshot' />  
+          <img onClick={() => triggerPopup(headshot)}src={headshot.url} alt='headshot' />  
         </div>
         <div className='banner-about-div'>
             <h2>About Me</h2>
