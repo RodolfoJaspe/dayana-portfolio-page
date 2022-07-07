@@ -1,5 +1,4 @@
 .about{
-    height:50vh;
     width:100vw;
     display:flex;
     flex-direction: row;
@@ -17,7 +16,6 @@
     border: 1px solid black;
     cursor:pointer;
     color: black;
-    width: 15vh;
     transition: .2s;
 
 }
