@@ -14,9 +14,9 @@ export default function Carousel({images, triggerPopup}) {
 
     const responsive = {
         500: { items: 1 },
-        800: { items: 2 },
-        1350: { items: 3 },
-        1780: { items: 4 },
+        635: { items: 2 },
+        950: { items: 3 },
+        1600: { items: 4 },
     };
 
 console.log(pictures)

@@ -30,5 +30,34 @@
     width:40%;
 }
 
+@media(max-width:1784px){
+    .gallery{
+        width:90vw;
+    }
+}
+
+@media(max-width:1600px){
+    .gallery{
+        width:80vw;
+    }
+}
+
+@media(max-width:1350px){
+    .gallery{
+        width:90vw;
+    }
+}
+
+@media(max-width:1200px){
+    .gallery{
+        width:100vw;
+    }
+}
+
+/* @media(max-width:1135px){
+    .gallery{
+        width:100vw;
+    }
+} */
 
 

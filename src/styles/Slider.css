@@ -110,7 +110,7 @@
   .alice-carousel__prev-btn {
     position: absolute;
     text-align: left;
-    background: rgba(255, 255, 255, 0.485);
+    background-color: rgba(90, 167, 192, 0.5);
     top: 35%;
     left: 15px;
     width: 50px;
@@ -123,7 +123,7 @@
 .alice-carousel__next-btn {
     position: absolute;
     text-align: left;
-    background: rgba(255, 255, 255, 0.485);
+    background-color: rgba(90, 167, 192, 0.5);
     top: 35%;
     right: 15px;
     width: 50px;
@@ -141,15 +141,15 @@
     cursor: pointer;
     justify-content: center;
     margin: 0;
-    color:#333d4b;
+    color:rgba(255, 255, 255, 0.587);
     font-size: 2rem;
     width: 50px;
     height: 50px;
   }
   .alice-carousel__prev-btn-item:hover,
   .alice-carousel__next-btn-item:hover {
-    color: #3e5679;
-    background: rgba(255, 255, 255, 0.572);
+    color: white;
+    background-color: rgba(90, 167, 192, 0.8);
     border-radius: 50%;
   }
   .alice-carousel__prev-btn-item.__inactive,
