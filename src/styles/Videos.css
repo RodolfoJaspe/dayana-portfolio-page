@@ -1,12 +1,9 @@
 .videos{
-    /* height:150vh; */
-    /* background:orange; */
     width:100%;
     margin-bottom: 30vh;
 }
 
 .videos-list {
-    /* width: 100%; */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
