@@ -196,7 +196,7 @@
     border-width: 8px 0 8px 15px;
     border-style: solid;
     border-color: transparent;
-    border-left-color: #465798;
+    background-color: rgb(69, 126, 146);
   }
   .alice-carousel__play-btn-item::before {
     left: 5px;
@@ -229,13 +229,13 @@
     height: 8px;
     cursor: pointer;
     border-radius: 50%;
-    background-color: #e0e4fb;
+    background-color: rgba(90, 167, 192, 0.461);
   }
   .alice-carousel__dots-item:not(.__custom):not(:last-child) {
     margin-right: 20px;
   }
   .alice-carousel__dots-item:not(.__custom):hover, .alice-carousel__dots-item:not(.__custom).__active {
-    background-color: #6e7ebc;
+    background-color: rgb(69, 126, 146);
   }
   
   .alice-carousel__slide-info {

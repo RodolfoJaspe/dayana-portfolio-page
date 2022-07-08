@@ -93,6 +93,13 @@
     overflow: hidden;
   }
   
+
+  .alice-carousel__next-btn-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
   .alice-carousel__prev-btn,
   .alice-carousel__next-btn {
     display: inline-block;
