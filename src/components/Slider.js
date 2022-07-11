@@ -1,6 +1,8 @@
 import React from 'react';
 import "../styles/Slider.css";
 import AliceCarousel from 'react-alice-carousel';
+import NextArrow from "../Assets/icons/right-arrow.png"
+import PrevArrow from "../Assets/icons/left-arrow.png"
 
 export default function Slider({images, triggerPopup}) {
 
@@ -12,7 +14,13 @@ export default function Slider({images, triggerPopup}) {
         </div>
     )) 
 
-console.log(pictures)
+    const renderNextButton = ({ isDisabled }) => {
+        return <div className='next-arrow'><img src={NextArrow} alt="next-arrow"/></div>
+      };
+    
+      const renderPrevButton = ({ isDisabled }) => {
+        return <div className='prev-arrow'><img src={PrevArrow} alt="prev-arrow"/></div>
+      };
   return (
     <AliceCarousel 
         mouseTracking 
@@ -23,6 +31,8 @@ console.log(pictures)
         keyboardNavigation
         animationType="fadeout" 
         controlsStrategy="alternate"
+        renderPrevButton={renderPrevButton}
+        renderNextButton={renderNextButton}
         />
   )
 }

@@ -1,6 +1,8 @@
 import React from 'react';
 import "../styles/Carousel.css";
 import AliceCarousel from 'react-alice-carousel';
+import NextArrow from "../Assets/icons/right-arrow.png"
+import PrevArrow from "../Assets/icons/left-arrow.png"
 
 export default function Carousel({images, triggerPopup}) {
 
@@ -19,7 +21,13 @@ export default function Carousel({images, triggerPopup}) {
         1600: { items: 4 },
     };
 
-console.log(pictures)
+    const renderNextButton = ({ isDisabled }) => {
+        return <div className='next-arrow'><img src={NextArrow} alt="next-arrow"/></div>
+      };
+    
+      const renderPrevButton = ({ isDisabled }) => {
+        return <div className='prev-arrow'><img src={PrevArrow} alt="prev-arrow"/></div>
+      };
   return (
     <AliceCarousel 
         mouseTracking 
@@ -32,6 +40,8 @@ console.log(pictures)
         infinite
         keyboardNavigation
         controlsStrategy="alternate"
+        renderPrevButton={renderPrevButton}
+        renderNextButton={renderNextButton}
         />
   )
 }

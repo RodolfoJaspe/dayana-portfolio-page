@@ -92,139 +92,42 @@
     opacity: 0;
     overflow: hidden;
   }
-  
 
-  /*.alice-carousel__next-btn-wrapper{
+  .next-arrow, .prev-arrow{
     display: flex;
     align-items: center;
-    justify-content: center;
-  }*/
-
-  .alice-carousel__prev-btn,
-  .alice-carousel__next-btn {
-    display: inline-block;
-    box-sizing: border-box;
-    width: 50%;
-    padding: 10px 5px;
-
   }
-  .alice-carousel__prev-btn [data-area]::after,
-  .alice-carousel__next-btn [data-area]::after {
-    position: relative;
-    content: attr(data-area);
-    text-transform: capitalize;
+
+  .next-arrow img{
+    width:30px;
+  }
+
+  .prev-arrow img {
+    width: 30px
   }
   
-  .alice-carousel__prev-btn {
+  .alice-carousel__prev-btn,.alice-carousel__next-btn {
     position: absolute;
     text-align: left;
     background-color: rgba(90, 167, 192, 0.5);
     top: 35%;
-    left: 15px;
     width: 50px;
     height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
+    cursor: pointer;
 }
 .alice-carousel__next-btn {
-    position: absolute;
-    text-align: left;
-    background-color: rgba(90, 167, 192, 0.5);
-    top: 35%;
     right: 15px;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-
 }
-  
-  .alice-carousel__prev-btn-item,
-  .alice-carousel__next-btn-item {
-    display: flex;
-    cursor: pointer;
-    justify-content: center;
-    margin: 0;
-    color:rgba(255, 255, 255, 0.725);
-
-  }
-  .alice-carousel__next-btn-item span{
-    font-size: 2rem;
-    vertical-align: middle;
-    height: 50px;
-  }
-  .alice-carousel__prev-btn-item:hover,
-  .alice-carousel__next-btn-item:hover {
-    color: white;
-    background-color: rgba(90, 167, 192, 0.8);
-  }
-  .alice-carousel__prev-btn-item.__inactive,
-  .alice-carousel__next-btn-item.__inactive {
-    opacity: 0.4;
-    pointer-events: none;
-    border-radius: 50%;
-  }
-  
-  .alice-carousel__play-btn {
-    position: absolute;
-    top: 30px;
-    left: 20px;
-    display: inline-block;
-  }
-  .alice-carousel__play-btn:hover {
-    cursor: pointer;
-  }
-  .alice-carousel__play-btn-wrapper {
-    position: relative;
-    width: 32px;
-    height: 32px;
-    padding: 10px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.472);
-  }
-  
-  .alice-carousel__play-btn-item {
-    position: absolute;
-    width: 32px;
-    height: 32px;
-    cursor: pointer;
-    border: 0;
-    outline: none;
-    background: transparent;
-  }
-  .alice-carousel__play-btn-item::before, .alice-carousel__play-btn-item::after {
-    position: absolute;
-    pointer-events: none;
-    display: block;
-    width: 0;
-    height: 0;
-    content: "";
-    transition: all 0.4s linear;
-    border-width: 8px 0 8px 15px;
-    border-style: solid;
-    border-color: transparent;
-    border-left-color: #465798;
-  }
-  .alice-carousel__play-btn-item::before {
-    left: 5px;
-    height: 14px;
-  }
-  .alice-carousel__play-btn-item::after {
-    top: 7px;
-    left: 18px;
-  }
-  .alice-carousel__play-btn-item.__pause::before, .alice-carousel__play-btn-item.__pause::after {
-    height: 30px;
-    border-width: 0 0 0 10px;
-  }
-  .alice-carousel__play-btn-item.__pause::after {
-    top: 0;
-    left: 18px;
-  }
+.alice-carousel__prev-btn {
+    left: 15px;
+}
+.alice-carousel__prev-btn:hover,.alice-carousel__next-btn:hover {
+    background-color: rgba(90, 167, 192, 0.743);
+}
   
   .alice-carousel__dots {
     margin: 30px 3px 5px;
