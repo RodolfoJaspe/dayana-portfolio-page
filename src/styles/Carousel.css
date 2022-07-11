@@ -94,11 +94,11 @@
   }
   
 
-  .alice-carousel__next-btn-wrapper{
+  /*.alice-carousel__next-btn-wrapper{
     display: flex;
     align-items: center;
     justify-content: center;
-  }
+  }*/
 
   .alice-carousel__prev-btn,
   .alice-carousel__next-btn {
@@ -113,7 +113,6 @@
     position: relative;
     content: attr(data-area);
     text-transform: capitalize;
-    vertical-align: auto;
   }
   
   .alice-carousel__prev-btn {
@@ -151,21 +150,23 @@
     justify-content: center;
     margin: 0;
     color:rgba(255, 255, 255, 0.725);
+
+  }
+  .alice-carousel__next-btn-item span{
     font-size: 2rem;
-    width: 50px;
+    vertical-align: middle;
     height: 50px;
-    vertical-align: auto;
   }
   .alice-carousel__prev-btn-item:hover,
   .alice-carousel__next-btn-item:hover {
     color: white;
     background-color: rgba(90, 167, 192, 0.8);
-    border-radius: 50%;
   }
   .alice-carousel__prev-btn-item.__inactive,
   .alice-carousel__next-btn-item.__inactive {
     opacity: 0.4;
     pointer-events: none;
+    border-radius: 50%;
   }
   
   .alice-carousel__play-btn {
