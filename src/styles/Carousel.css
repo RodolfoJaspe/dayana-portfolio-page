@@ -99,19 +99,22 @@
     align-items: center;
     justify-content: center;
   }
-  
+
   .alice-carousel__prev-btn,
   .alice-carousel__next-btn {
     display: inline-block;
     box-sizing: border-box;
     width: 50%;
     padding: 10px 5px;
+
   }
   .alice-carousel__prev-btn [data-area]::after,
   .alice-carousel__next-btn [data-area]::after {
     position: relative;
     content: attr(data-area);
     text-transform: capitalize;
+    /* background:red; */
+    padding-bottom: 4px;
   }
   
   .alice-carousel__prev-btn {
