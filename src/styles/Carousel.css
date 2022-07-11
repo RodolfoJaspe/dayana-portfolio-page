@@ -113,8 +113,7 @@
     position: relative;
     content: attr(data-area);
     text-transform: capitalize;
-    /* background:red; */
-    padding-bottom: 4px;
+    vertical-align: auto;
   }
   
   .alice-carousel__prev-btn {
@@ -155,6 +154,7 @@
     font-size: 2rem;
     width: 50px;
     height: 50px;
+    vertical-align: auto;
   }
   .alice-carousel__prev-btn-item:hover,
   .alice-carousel__next-btn-item:hover {
