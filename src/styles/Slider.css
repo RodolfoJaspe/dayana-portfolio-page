@@ -166,6 +166,7 @@
     vertical-align: middle;
     line-height: 0;
   }
+  
 
   @media(max-width: 500px){
     .slider-inner{

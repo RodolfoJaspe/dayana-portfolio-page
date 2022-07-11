@@ -6,7 +6,7 @@ import PrevArrow from "../Assets/icons/left-arrow.png"
 
 export default function Slider({images, triggerPopup}) {
 
-    const handleDragStart = (e) => e.preventDefault();
+    const handleDragStart = (e) => (e.preventDefault());
 
     const pictures = images.map(image => (
         <div onClick={()=>triggerPopup(image)}>

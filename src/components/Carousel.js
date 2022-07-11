@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import "../styles/Carousel.css";
 import AliceCarousel from 'react-alice-carousel';
 import NextArrow from "../Assets/icons/right-arrow.png"
@@ -6,10 +6,24 @@ import PrevArrow from "../Assets/icons/left-arrow.png"
 
 export default function Carousel({images, triggerPopup}) {
 
-    const handleDragStart = (e) => e.preventDefault();
+    const [isDragging, setIsDragging] = useState(false);
+
+    /* to avoid clicking of an image when swiping */
+    const handleDragStart = (e) => {
+        setIsDragging(true)
+        setTimeout(()=>{
+            setIsDragging(false)
+        },2000)
+        e.preventDefault()};
+
+    const openImage = (image)=> {
+        if(!isDragging){
+            triggerPopup(image)
+        }
+    }
 
     const pictures = images.map(image => (
-        <div onClick={()=>triggerPopup(image)}>
+        <div onClick={()=>openImage(image)}>
             <img className="carousel-image" src={image.url} alt={image.title} onDragStart={handleDragStart} role="presentation"/>
         </div>
     )) 
