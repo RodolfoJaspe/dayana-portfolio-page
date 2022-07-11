@@ -23,10 +23,10 @@ function Navbar() {
                 <Link to='gallery' className='nav-item' onClick={closeMenu} spy={true} smooth={true} offset={-400} duration={500}>Gallery</Link>
             </div>
             <div>
-                <Link to='videos' className='nav-item' onClick={closeMenu} spy={true} smooth={true} offset={-300} duration={500}>Videos</Link>
+                <Link to='videos' className='nav-item' onClick={closeMenu} spy={true} smooth={true} offset={-400} duration={500}>Videos</Link>
             </div>
             <div>
-                <Link to='contact' className='nav-item' onClick={closeMenu} spy={true} smooth={true} offset={-570} duration={500}>Contact</Link>
+                <Link to='contact' className='nav-item' onClick={closeMenu} spy={true} smooth={true} offset={-500} duration={500}>Contact</Link>
             </div>
         </div>    
     </div>

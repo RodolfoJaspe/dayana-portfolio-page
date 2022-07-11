@@ -14,12 +14,8 @@
 
 .resume-popup-inner {
     position: relative;
-    /* width: 65vw; */
     height: 90%;
-    /* padding: 5%; */
-    /* background: rgba(255, 255, 255, 0.733); */
     border-radius: 1vw;
-    /* overflow-y: scroll; */
     scroll-behavior: smooth;
     display: flex;
     flex-direction: column;
@@ -53,5 +49,5 @@
 
 .document {
     height: 100%;
-    border-radius: 1vw;
+    overflow-y: scroll;
 }

@@ -10,3 +10,16 @@
     align-items: flex-start;
     margin:0;
 }
+
+@media(max-width: 1200px){
+    .videos{
+        margin-bottom: 20vh;
+    }
+}
+
+@media(max-width: 1000px){
+    .videos{
+        margin-bottom: 15vh;
+    }
+}
+

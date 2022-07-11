@@ -18,8 +18,7 @@
 .slider-outer {
     background-color: rgba(90, 167, 192, .181);
     width: 100vw;
-    height: 75vh;
-    padding-top: 2vh;
+    padding: 2vh 0;
     margin: 10vh 0 15vh 0;
     display:flex;
     justify-content: center;

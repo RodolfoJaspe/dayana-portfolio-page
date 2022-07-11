@@ -26,11 +26,13 @@
     padding-bottom:5px;
     transition: 1s;
     cursor:pointer;
+    color: rgb(200, 200, 200);
 }
 
 .nav-item.active {
     font-size: 1.8rem;
     transition: 1s;
+    color: rgb(255, 255, 255);
 }
 
 .nav-item:hover {

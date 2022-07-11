@@ -52,6 +52,7 @@
     font-family: Louis George Cafe;
     border-radius: .2rem;
     border: none;
+    padding:5px;
 }
 
 .input.message{
@@ -111,4 +112,26 @@
 
 .profiles a:hover{
     color: rgb(121, 158, 172);
+}
+
+@media(max-width:1000px){
+    .form {
+        height:300px;
+    }    
+    .profiles a{
+        font-size: larger;
+    }
+    .contact h2 {
+        font-size: 1.8rem;
+    }
+    .banner-contact-div {
+        padding: 2vw 1vw;
+    }    
+}
+
+@media(max-width:500px){
+    .form {
+        height:300px;
+        width:45%;
+    }
 }

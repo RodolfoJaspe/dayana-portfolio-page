@@ -14,11 +14,12 @@
 
 .image-popup-inner {
     position: relative;
-    /* width: 65vw; */
     height: 90vh;
-    /* background: rgba(255, 255, 255, 0.733); */
     border-radius: 1vw;
     scroll-behavior: smooth;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .image-popup-inner img{
@@ -46,3 +47,10 @@
     background-color: rgba(255, 255, 255, 0.6);
 }
 
+
+@media(max-width:1000px){
+    .image-popup-inner img{
+        width:100%;
+        height:auto;
+    }
+}

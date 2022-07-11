@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React,{useEffect, useState} from 'react'
 import { Document, Page } from 'react-pdf/dist/esm/entry.webpack'
 import resume from '../Assets/resume.pdf';
 import "../styles/ResumePopup.css";
@@ -12,6 +12,12 @@ function ResumePopup({popup, setPopup}) {
     function onDocumentLoadSuccess({ numPages }) {
         setNumPages(numPages);
       }
+
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+
+    useEffect(()=> {
+        setWindowWidth(window.innerWidth)
+    },[windowWidth])
   return (
     <div className='resume-popup-outer'>
         <div className='resume-popup-inner'>
@@ -19,7 +25,7 @@ function ResumePopup({popup, setPopup}) {
                 className="document"
                 file={resume} 
                 onLoadSuccess={onDocumentLoadSuccess}>
-                <Page pageNumber={pageNumber} />
+                <Page width={windowWidth} pageNumber={pageNumber} />
             </Document>
             <div className='download-resume-outer'>
                 <div className='download-resume'>
@@ -29,7 +35,8 @@ function ResumePopup({popup, setPopup}) {
             </div>
             <button 
                 className='resume-popup-button'
-                onClick={() => setPopup(!popup)}><img src={closeBtn} alt="close button" /></button>
+                onClick={() => setPopup(!popup)}><img src={closeBtn} alt="close button" />
+            </button>
         </div>
         
     </div>
