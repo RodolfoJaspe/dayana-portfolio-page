@@ -4,7 +4,7 @@ export const headshotImages =[
         url:"https://drive.google.com/uc?export=view&id=1HkWlmg2uhuVJrV_PomE6nhHQFhD3mxxN"},
         {   id:2,
             title: "Green headshot",
-            url:"https://drive.google.com/uc?export=view&id=1ET_nFZaogqJFB8mqiczS4b0wHi_CAXe6"},
+            url:"https://drive.google.com/uc?export=view&id=1dlG3yGyEk9oBMxfIfDxKaYqFHf8fajD2"},
         {   id:3,
             title: "Blue moño headshot",
         url:"https://drive.google.com/uc?export=view&id=1wEBYXJVIoM26n6_ykODmIcSWIPiaIyvZ"},
@@ -25,8 +25,9 @@ export const headshotImages =[
         url:"https://drive.google.com/uc?export=view&id=1gXDyQPDyXhgQ3Y7AFJL_10DiUuhEgYK8"},
         {   id:9,
             title: "rooftop headshot",
-        url:"https://drive.google.com/uc?export=view&id=1QiqGs4wa1J3H6oHiUwTKNa0JX3YPk3TJ"},      
+        url:"https://drive.google.com/uc?export=view&id=15C2lKtC0g5G9Mp5U-fxoITnXG0pIxmPC"},      
 ]
+
 
 export const onSet = [
     {   id:1,
