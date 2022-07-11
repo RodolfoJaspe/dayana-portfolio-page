@@ -25,7 +25,7 @@ function ResumePopup({popup, setPopup}) {
                 className="document"
                 file={resume} 
                 onLoadSuccess={onDocumentLoadSuccess}>
-                <Page width={windowWidth} pageNumber={pageNumber} />
+                <Page width={windowWidth>1000?1000:windowWidth} pageNumber={pageNumber} />
             </Document>
             <div className='download-resume-outer'>
                 <div className='download-resume'>
