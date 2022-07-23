@@ -25,7 +25,7 @@ export const headshotImages =[
         url:"https://drive.google.com/uc?export=view&id=1gXDyQPDyXhgQ3Y7AFJL_10DiUuhEgYK8"},
         {   id:9,
             title: "rooftop headshot",
-        url:"https://drive.google.com/uc?export=view&id=15C2lKtC0g5G9Mp5U-fxoITnXG0pIxmPC"},      
+        url:"https://drive.google.com/uc?export=view&id=15C2lKtC0g5G9Mp5U-fxoITnXG0pIxmPC"},   
 ]
 
 

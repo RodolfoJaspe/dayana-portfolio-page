@@ -1,0 +1,26 @@
+.admin-image-outer {
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-image-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.admin-image-form input{
+    width:45%;
+}
+
+.admin-image-list img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    object-position: top;
+    margin: 5px;
+}
+
+.image-div {
+    display: flex;
+    flex-direction: column;
+}

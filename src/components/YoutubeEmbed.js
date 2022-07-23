@@ -8,9 +8,9 @@ function YoutubeEmbed({embedId}) {
         // width="540"
         // height="305"
         src={`https://www.youtube.com/embed/${embedId}`}
-        frameborder="0" 
+        frameBorder="0" 
         allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" 
-        allowfullscreen
+        allowFullScreen
         style={{
             position: "relative",
             top: 0,
