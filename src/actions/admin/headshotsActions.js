@@ -1,4 +1,5 @@
 import axios from "axios";
+import { currentUrl } from "../../Assets/urls";
 
 export const GET_HEADSHOTS_START = "GET_HEADSHOTS_START";
 export const GET_HEADSHOTS_SUCCESS = "GET_HEADSHOTS_SUCCESS";
@@ -19,11 +20,15 @@ const headers = {
 export const getHeadshots = (user_id) => dispatch => {
     dispatch({type: GET_HEADSHOTS_START});
     console.log(user_id)
-    axios.get(`https://dayana-portfolio.herokuapp.com/api/headshots/${user_id}`,{headers})
+    axios.get(`${currentUrl}/api/headshots/${user_id}`,{headers})
         .then(
             res => {
                 console.log(res.data)
-                dispatch({type:GET_HEADSHOTS_SUCCESS, payload: res.data})
+                const sortedHeadshots = res.data.sort((a, b) => {
+                    return b.id - a.id;
+                });
+                console.log(sortedHeadshots)
+                dispatch({type:GET_HEADSHOTS_SUCCESS, payload: sortedHeadshots})
             }
         ).catch(err => {
             console.log(err)
@@ -34,7 +39,7 @@ export const getHeadshots = (user_id) => dispatch => {
 export const addHeadshot = (image) => dispatch => {
     dispatch({type : ADD_HEADSHOT_START})
     console.log(image)
-        axios.post(`https://dayana-portfolio.herokuapp.com/api/headshots/`,image)
+        axios.post(`${currentUrl}/api/headshots/`,image)
             .then(res => {
                 console.log(res)
                 dispatch({type: ADD_HEADSHOT_SUCCESS, payload: res.data})
@@ -47,7 +52,7 @@ export const addHeadshot = (image) => dispatch => {
 export const deleteHeadshot = (id) => dispatch => {
     console.log(id)
     dispatch({type : DELETE_HEADSHOT_START})
-    axios.delete(`https://dayana-portfolio.herokuapp.com/api/headshots/${id}`, headers)
+    axios.delete(`${currentUrl}/api/headshots/${id}`, headers)
         .then(res => {
             console.log(res)
             dispatch({type: DELETE_HEADSHOT_SUCCESS, payload:res.data})

@@ -1,4 +1,5 @@
 import axios from "axios";
+import { currentUrl } from "../../Assets/urls";
 
 export const GET_ONSET_START = "GET_ONSET_START";
 export const GET_ONSET_SUCCESS = "GET_ONSET_SUCCESS";
@@ -18,11 +19,14 @@ const headers = {
 
 export const getOnset = (user_id) => dispatch => {
     dispatch({type: GET_ONSET_START})
-    axios.get(`https://dayana-portfolio.herokuapp.com/api/onset/${user_id}`,{headers})
+    axios.get(`${currentUrl}/api/onset/${user_id}`,{headers})
         .then(
             res => {
                 console.log(res.data)
-                dispatch({type:GET_ONSET_SUCCESS, payload: res.data})
+                const sortedOnset = res.data.sort((a, b) => {
+                    return b.id - a.id;
+                });
+                dispatch({type:GET_ONSET_SUCCESS, payload: sortedOnset})
             }
         ).catch(err => {
             dispatch({type: GET_ONSET_FAILURE})
@@ -31,7 +35,7 @@ export const getOnset = (user_id) => dispatch => {
 
 export const addOnset = (image) => dispatch => {
     dispatch({type : ADD_ONSET_START})
-    axios.post(`https://dayana-portfolio.herokuapp.com/api/onset/`,image)
+    axios.post(`${currentUrl}/api/onset/`,image)
         .then(res => {
             console.log(res)
             dispatch({type: ADD_ONSET_SUCCESS, payload: res.data})
@@ -43,7 +47,7 @@ export const addOnset = (image) => dispatch => {
 
 export const deleteOnset = (id) => dispatch => {
     dispatch({type : DELETE_ONSET_START})
-    axios.delete(`https://dayana-portfolio.herokuapp.com/api/onset/${id}`, headers)
+    axios.delete(`${currentUrl}/api/onset/${id}`, headers)
         .then(res => {
             console.log(res)
             dispatch({type: DELETE_ONSET_SUCCESS, payload:res.data})

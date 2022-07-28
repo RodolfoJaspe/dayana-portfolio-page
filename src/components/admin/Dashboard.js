@@ -6,6 +6,7 @@ import { addOnstage, getOnstage, deleteOnstage } from '../../actions/admin/onsta
 import { addVideo, getVideos, deleteVideo } from '../../actions/admin/videosActions.js';
 import AdminImages from './AdminImages.js';
 import AdminVideos from './AdminVideos.js';
+import Biography from './Biography.js';
 
 
 function Dashboard({
@@ -47,6 +48,8 @@ function Dashboard({
         <AdminImages images={onstage} addImage={addOnstage} user_id={user_id} deleteImage={deleteOnstage}/>
         <h2>Videos</h2>
         <AdminVideos videos={videos} addVideo={addVideo} user_id={user_id} deleteVideo={deleteVideo}/>
+        <h2>Biography</h2>
+        <Biography />
     </div>
   )
 }

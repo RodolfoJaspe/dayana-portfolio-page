@@ -1,4 +1,5 @@
 import axios from "axios";
+import { currentUrl } from "../../Assets/urls";
 
 export const GET_ONSTAGE_START = "GET_ONSTAGE_START";
 export const GET_ONSTAGE_SUCCESS = "GET_ONSTAGE_SUCCESS";
@@ -18,11 +19,13 @@ const headers = {
 
 export const getOnstage = (user_id) => dispatch => {
     dispatch({type: GET_ONSTAGE_START})
-        axios.get(`https://dayana-portfolio.herokuapp.com/api/onstage/${user_id}`,{headers})
+        axios.get(`${currentUrl}/api/onstage/${user_id}`,{headers})
             .then(
                 res => {
-                    console.log(res.data.onstage)
-                    dispatch({type:GET_ONSTAGE_SUCCESS, payload: res.data})
+                    const sortedOnstage = res.data.sort((a, b) => {
+                        return b.id - a.id;
+                    });
+                    dispatch({type:GET_ONSTAGE_SUCCESS, payload: sortedOnstage})
                 }
             ).catch(err => {
                 dispatch({type: GET_ONSTAGE_FAILURE})
@@ -31,7 +34,7 @@ export const getOnstage = (user_id) => dispatch => {
 
 export const addOnstage = (image) => dispatch => {
     dispatch({type : ADD_ONSTAGE_START})
-        axios.post(`https://dayana-portfolio.herokuapp.com/api/onstage/`,image)
+        axios.post(`${currentUrl}/api/onstage/`,image)
             .then(res => {
                 console.log(res)
                 dispatch({type: ADD_ONSTAGE_SUCCESS, payload: res.data})
@@ -43,7 +46,7 @@ export const addOnstage = (image) => dispatch => {
 
 export const deleteOnstage = (id) => dispatch => {
     dispatch({type : DELETE_ONSTAGE_START})
-    axios.delete(`https://dayana-portfolio.herokuapp.com/api/onstage/${id}`, headers)
+    axios.delete(`${currentUrl}/api/onstage/${id}`, headers)
         .then(res => {
             console.log(res)
             dispatch({type: DELETE_ONSTAGE_SUCCESS, payload:res.data})

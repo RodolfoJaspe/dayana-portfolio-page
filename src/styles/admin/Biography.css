@@ -1,0 +1,10 @@
+.bio-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}   
+
+.bio-textarea {
+    width:85%;
+    padding: 5vh 5vw;
+}

@@ -1,4 +1,4 @@
-import { USER_LOGIN_START, USER_LOGIN_SUCCESS, USER_LOGIN_FAILURE, CLEAR_LOGIN_ERROR, USER_LOGOUT } from "../../actions/admin/userActions"
+import { USER_LOGIN_START, USER_LOGIN_SUCCESS, USER_LOGIN_FAILURE, CLEAR_LOGIN_ERROR, USER_LOGOUT, ADD_BIOGRAPHY_START,ADD_BIOGRAPHY_SUCCESS,ADD_BIOGRAPHY_FAILURE, GET_BIOGRAPHY_SUCCESS, GET_BIOGRAPHY_FAILURE } from "../../actions/admin/userActions"
 import { GET_HEADSHOTS_START, GET_HEADSHOTS_SUCCESS, GET_HEADSHOTS_FAILURE, ADD_HEADSHOT_START, ADD_HEADSHOT_SUCCESS, ADD_HEADSHOT_FAILURE, DELETE_HEADSHOT_START, DELETE_HEADSHOT_SUCCESS, DELETE_HEADSHOT_FAILURE} from "../../actions/admin/headshotsActions.js";
 import { GET_ONSET_START, GET_ONSET_SUCCESS, GET_ONSET_FAILURE, ADD_ONSET_START, ADD_ONSET_SUCCESS, ADD_ONSET_FAILURE, DELETE_ONSET_START, DELETE_ONSET_SUCCESS, DELETE_ONSET_FAILURE } from "../../actions/admin/onsetActions";
 import { GET_ONSTAGE_START, GET_ONSTAGE_SUCCESS, GET_ONSTAGE_FAILURE, ADD_ONSTAGE_START, ADD_ONSTAGE_SUCCESS, ADD_ONSTAGE_FAILURE, DELETE_ONSTAGE_START, DELETE_ONSTAGE_SUCCESS, DELETE_ONSTAGE_FAILURE } from "../../actions/admin/onstageActions";
@@ -108,6 +108,16 @@ export const userReducer = ( state = user, action ) => {
             return {...state, loading: false, media: {...state.media, videos: filteredVideos}};
         case DELETE_VIDEO_FAILURE:
             return {...state, loading:false}; 
+        case ADD_BIOGRAPHY_START:
+            return {...state, loading:true};
+        case ADD_BIOGRAPHY_SUCCESS:
+            return {...state, loading:false, biography: action.payload};
+        case ADD_BIOGRAPHY_FAILURE:
+            return {...state, loading:false};
+        case GET_BIOGRAPHY_SUCCESS:
+            return {...state, biography: action.payload, loading: false};
+        case GET_BIOGRAPHY_FAILURE:
+            return {...state, loading: false}
         default:
             return state;
     }

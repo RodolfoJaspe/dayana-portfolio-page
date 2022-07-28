@@ -1,4 +1,5 @@
 import axios from "axios";
+import { currentUrl } from "../../Assets/urls";
 
 export const GET_VIDEOS_START = "GET_VIDEOS_START";
 export const GET_VIDEOS_SUCCESS = "GET_VIDEOS_SUCCESS";
@@ -18,11 +19,14 @@ const headers = {
 
 export const getVideos = (user_id) => dispatch => {
     dispatch({type: GET_VIDEOS_START})
-        axios.get(`https://dayana-portfolio.herokuapp.com/api/videos/${user_id}`,{headers})
+        axios.get(`${currentUrl}/api/videos/${user_id}`,{headers})
             .then(
                 res => {
                     console.log(res.data)
-                    dispatch({type:GET_VIDEOS_SUCCESS, payload: res.data})
+                    const sortedVideos = res.data.sort((a, b) => {
+                        return b.id - a.id;
+                    });
+                    dispatch({type:GET_VIDEOS_SUCCESS, payload: sortedVideos})
                 }
             ).catch(err => {
                 dispatch({type: GET_VIDEOS_FAILURE})
@@ -31,7 +35,7 @@ export const getVideos = (user_id) => dispatch => {
 
 export const addVideo = (video) => dispatch => {
     dispatch({type : ADD_VIDEO_START})
-        axios.post(`https://dayana-portfolio.herokuapp.com/api/videos/`,video)
+        axios.post(`${currentUrl}/api/videos/`,video)
             .then(res => {
                 console.log(res)
                 dispatch({type: ADD_VIDEO_SUCCESS, payload: res.data})
@@ -43,7 +47,7 @@ export const addVideo = (video) => dispatch => {
 
 export const deleteVideo = (id) => dispatch => {
     dispatch({type : DELETE_VIDEO_START})
-    axios.delete(`https://dayana-portfolio.herokuapp.com/api/videos/${id}`, headers)
+    axios.delete(`${currentUrl}/api/videos/${id}`, headers)
         .then(res => {
             console.log(res)
             dispatch({type: DELETE_VIDEO_SUCCESS, payload:res.data})
