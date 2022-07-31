@@ -166,9 +166,20 @@
     vertical-align: middle;
     line-height: 0;
   }
-  
 
-  @media(max-width: 500px){
+  @media(max-width: 1300px){
+    .slider-inner{
+        width:60%;
+    }
+  }
+
+  @media(max-width: 750px){
+    .slider-inner{
+        width:85%;
+    }
+  }
+
+  @media(max-width: 550px){
     .slider-inner{
         width:100%;
     }
