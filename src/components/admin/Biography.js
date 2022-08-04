@@ -17,7 +17,6 @@ function Biography({addBiography,user}) {
     const submitForm = e => {
         e.preventDefault()
         addBiography(user.user_id, biography.biography)
-        biography.biography = ""
     }
 
   return (
