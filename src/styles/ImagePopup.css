@@ -20,7 +20,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow-y: scroll;
 }
+
+/* fix popup image height on mobile landscape issue */
 
 .image-popup-inner img{
     object-fit: contain;
