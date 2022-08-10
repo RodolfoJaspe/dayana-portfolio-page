@@ -15,6 +15,7 @@
 .resume-image-inner {
     position: relative;
     height: 90%;
+    overflow-y: scroll;
 }
 
 .resume-img {
