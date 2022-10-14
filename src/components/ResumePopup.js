@@ -3,7 +3,7 @@ import resume from '../Assets/resume.pdf';
 import "../styles/ResumePopup.css";
 import closeBtn from "../Assets/icons/close.png";
 import pdf from "../Assets/icons/pdf.png";
-import resumeImg from "../Assets/resume.jpeg";
+import resumeImg from "../Assets/resume.jpg";
 
 function ResumePopup({popup, setPopup}) {
   return (

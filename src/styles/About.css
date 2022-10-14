@@ -1,5 +1,6 @@
 .about{
     width:100vw;
+    height: 50vh;
     display:flex;
     flex-direction: row;
     align-items: center;
@@ -17,7 +18,7 @@
     cursor:pointer;
     color: black;
     transition: .2s;
-
+    margin-bottom: 20px;
 }
 
 .resume-button:hover {
@@ -59,18 +60,19 @@
 
 .about .headshot-div {
     height: 100%;
-    border-right: 3px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.headshot-div img {
+.about .headshot-div img {
     cursor: pointer;
     height: 100%;
-    width: 40vh;
 }
 
 .banner-about-div{
-    height: 80%;
-    padding : 2vh 4vh;
+    height: 100%;
+    padding : 0 4vh;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -78,57 +80,45 @@
     color: white;
     line-height: 1.5rem;
     overflow-y: scroll;
+    width: 75%;
 }
 
 .banner-about-div p{
     font-size: 1.3rem;
     line-height: 1.3;
+    margin-top: 0;
 }
 
-.banner-about-div h2{
-    /* font-size: 1.8rem; */
-    margin-bottom: 0;
+@media(max-width: 1650px){
+    .about {
+        height:55vh;
+    }
 }
 
-@media(max-width:1500px){
+@media(max-width:1510px){
     .banner-about-div p{
         font-size: 1.1rem;
     }
 }
 
-@media(max-width:1200px){
-    .banner-about-div p{
-        font-size: 1rem;
+@media (max-width:1232px) {
+    .about .headshot-div img {
+        height: 40vw;
+        transform: translateX(-10px);
     }
-    .banner-about-div h2{
-        margin: 0px ;
+    .banner-about-div{
+        padding: 0 4vw;
     }
 }
 
 @media(max-width:1000px){
-    .banner-about-div{
-        height: 90%;
-        justify-content: flex-start;
-    }
-
-}
-
-@media(max-width:900px){
-    .headshot-div img {
-        width: 40vw;
-        object-fit: cover;
-        object-position: top;
+    .about{
+        height: 100%;
     }
 }
 
-@media(max-width:660px){
+@media(max-width: 800px){
     .headshot-div img {
-        width:0;
-    }
-    .about .headshot-div {
-        border-right: none;
-    }
-    .banner-about-div{
-        padding:8vw 4vw;
+        width: 0;
     }
 }

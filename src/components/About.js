@@ -40,14 +40,11 @@ function About({biography, getBiography}) {
         <div className='banner-about-div'>
             <h2>ABOUT ME</h2>
             {/* <p>{biography}</p> */}
-            <div>
-                <p>
-                Next Season Dayana will be seen playing Delivery Person in <i>Red Riding Hood</i> at TheaterLab. 
-                </p>
-                <p>Dayana Morales is a Venezuelan bilingual stage and screen actress, last seen playing Mimi in <i>RENT</i> at FAU's Festival Repertory. She discovered her love for acting while studying journalism and decided to leave her country to train herself and pursue her passion. She is working towards her BFA in Acting from Florida Atlantic University and has a background in modern dance, contemporary dance and pole dance. She has training in Droznin Russian Movement with the National Theater Institute and Stage Combat Unarmed with the Society of American Fight Directors. </p>
-                <p>Credits Include: <i>Romeo and Juliet</i> and <i>A Midsummer Night's Dream</i> (Shakespeare Troupe), <i>The Office "A Lo Miami"</i> (Microtheater Miami), <i>Prelude 2100</i> (Miami Live Arts-Deering Estate), Thea in <i>Hedda Gabler</i> (Florida Atlantic University) and Antonia in <i>Twelfth Night</i> (PalmBeach Shakespeare)</p>
+  
+                <p>Dayana Morales is a Venezuelan bilingual stage and screen actress, last seen playing Delivery Person in <i>Red Riding Hood</i> at TheatreLab. She discovered her love for acting while studying journalism and decided to leave her country to train herself and pursue her passion. She is working towards her BFA in Acting from Florida Atlantic University and has a background in modern dance, contemporary dance and pole dance. She has training in Droznin Russian Movement with the National Theater Institute and Stage Combat Unarmed with the Society of American Fight Directors. </p>
+                <p>Credits Include: Mimi in <i>RENT </i>(FAU's Festival Repertory) <i>Highlights from Romeo and Juliet</i> and <i>A Midsummer Night's Dream</i> (Shakespeare Troupe), <i>The Office "A Lo Miami"</i> (Microtheater Miami), <i>Prelude 2100</i> (Miami Live Arts-Deering Estate), Thea in <i>Hedda Gabler</i> (Florida Atlantic University) and Antonia in <i>Twelfth Night</i> (PalmBeach Shakespeare)</p>
         
-            </div>
+    
             <button className="resume-button"onClick={() => setPopup(!popup)}>Full Resume</button>
         </div>
     

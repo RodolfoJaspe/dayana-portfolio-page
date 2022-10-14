@@ -76,3 +76,5 @@ Carousel notes
 each item in the list has an id and an url
 loop through each item
 keep
+
+**\*\*** WORK ON ABOUT AND CONTACT PICTURES RESPONSIVENESS **\*\*\***
