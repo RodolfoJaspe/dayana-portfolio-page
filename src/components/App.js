@@ -5,6 +5,7 @@ import Home from './Home';
 import Navbar from './Navbar';
 import About from './About';
 import Videos from './Videos';
+import Reviews from './Reviews';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Home />
         <div className='main-content'>
             <About />
+            <Reviews />
             <Gallery />
             <Videos />
             <Contact />  

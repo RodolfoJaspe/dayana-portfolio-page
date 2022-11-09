@@ -20,7 +20,7 @@ function Navbar() {
                 <Link to='about' className='nav-item' onClick={closeMenu} spy={true} smooth={true} offset={-300} duration={500}>About</Link>
             </div>
             <div>
-                <Link to='gallery' className='nav-item' onClick={closeMenu} spy={true} smooth={true} offset={-400} duration={500}>Gallery</Link>
+                <Link to='gallery' className='nav-item' onClick={closeMenu} spy={true} smooth={true} offset={-300} duration={500}>Gallery</Link>
             </div>
             <div>
                 <Link to='videos' className='nav-item' onClick={closeMenu} spy={true} smooth={true} offset={-400} duration={500}>Videos</Link>
