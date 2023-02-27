@@ -42,13 +42,10 @@ function About({biography, getBiography}) {
             {/* <p>{biography}</p> */}
   
                 <p>
-                    Coming up next... City Theatre Miami, <i>ShortCuts Tour</i> & <i>Polaroid Stories</i> in Studio One Theatre at FAU
+                    Dayana Morales is a Venezuelan bilingual stage and screen actress, last seen playing Eurydice in <i>Polaroid Stories</i> at Studio One Theatre FAU. She discovered her love for acting while studying journalism and decided to leave her country to train herself and pursue her passion. She is working towards her BFA in Acting from Florida Atlantic University and has a background in modern dance, contemporary dance and pole dance. She has training in Droznin Russian Movement with the National Theater Institute and Stage Combat with the Society of American Fight Directors. 
                 </p>
                 <p>
-                    Dayana Morales is a Venezuelan bilingual stage and screen actress, last seen playing Delivery Person in <i>Red Riding Hood</i> at TheatreLab. She discovered her love for acting while studying journalism and decided to leave her country to train herself and pursue her passion. She is working towards her BFA in Acting from Florida Atlantic University and has a background in modern dance, contemporary dance and pole dance. She has training in Droznin Russian Movement with the National Theater Institute and Stage Combat with the Society of American Fight Directors. 
-                </p>
-                <p>
-                    Credits Include: Mimi in <i>RENT </i>(FAU's Festival Repertory) <i>Highlights from Romeo and Juliet</i> and <i>A Midsummer Night's Dream</i> (Shakespeare Troupe), <i>The Office "A Lo Miami"</i> (Microtheater Miami), <i>Prelude 2100</i> (Miami Live Arts-Deering Estate), Thea in <i>Hedda Gabler</i> (Florida Atlantic University) and Antonia in <i>Twelfth Night</i> (PalmBeach Shakespeare)    
+                    Credits Include: Delivery Person in <i>Red Riding Hood</i> (TheatreLab), <i>ShortCuts Tour</i> (CityTheatre Miami), Mimi in <i>RENT </i>(FAU's Festival Repertory) <i>Highlights from Romeo and Juliet</i> and <i>A Midsummer Night's Dream</i> (Shakespeare Troupe), <i>The Office "A Lo Miami"</i> (Microtheater Miami), <i>Prelude 2100</i> (Miami Live Arts-Deering Estate), Thea in <i>Hedda Gabler</i> (Florida Atlantic University) and Antonia in <i>Twelfth Night</i> (PalmBeach Shakespeare)    
                 </p>
         
     
