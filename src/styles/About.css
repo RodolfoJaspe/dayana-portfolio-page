@@ -73,7 +73,6 @@
 
 .banner-about-div{
     height: 100%;
-    padding-right : 4vh;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -120,5 +119,8 @@
     }
     .headshot-div img {
         width: 0;
+    }
+    .banner-about-div {
+        width: 98%;
     }
 }
