@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import clsx from 'clsx';
 import {
   $getRoot,
@@ -78,15 +78,19 @@ const Toolbar = () => {
 
   let html = {biography: ""}
 
+
+  const [apiResponse, setApiResponse] = useState()
+
   const handleSave = async () => {
     try {
       // Send a POST request with the editorState data
-      await axios.put(`${currentUrl}/api/users/1`, 
+      const response = await axios.put(`${currentUrl}/api/users/1`, 
         html,
       );
+        setApiResponse(response)
 
-    } catch (error) {
-      console.error(error);
+    } catch (error) {   
+        console.error(error);
     }
   };
 
@@ -96,6 +100,8 @@ const Toolbar = () => {
         html.biography = htmlString
     });
   },[editor, handleSave])
+
+  const editorString = {biography : JSON.stringify(editor._editorState)}
 
   const updateToolbar = React.useCallback(() => {
     const selection = $getSelection();
