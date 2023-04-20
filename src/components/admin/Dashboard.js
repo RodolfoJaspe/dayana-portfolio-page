@@ -22,7 +22,6 @@ import {
   faRotateLeft,
   faRotateRight,
 } from '@fortawesome/free-solid-svg-icons';
-import '../../styles/admin/Editor.css';
 
 library.add(
   faBold,

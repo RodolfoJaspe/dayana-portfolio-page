@@ -13,7 +13,6 @@ function Text() {
     },[])
 
     var stringToHTML = function (str) {
-        // console.log(str)
         var dom = document.createElement('div');
         dom.innerHTML = str;
         return dom;

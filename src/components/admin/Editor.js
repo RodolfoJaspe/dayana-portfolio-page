@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import clsx from 'clsx';
 import {
   $getRoot,
@@ -61,11 +61,6 @@ export const Editor = () => {
                 className="min-h-[450px] py-[15px] px-2.5 resize-none overflow-hidden text-ellipsis"
                 />
           }
-        //   placeholder={
-        //     <div className="absolute top-[15px] left-[10px] pointer-events-none select-none">
-        //       Enter some text...
-        //     </div>
-        //   }
         />
         <OnChangePlugin onChange={onChange} />
         <HistoryPlugin />
@@ -81,43 +76,26 @@ const Toolbar = () => {
   const [isStrikethrough, setIsStrikethrough] = React.useState(false);
   const [isUnderline, setIsUnderline] = React.useState(false);
 
-//   const [html, setHtml] = useState({biography: ""})
   let html = {biography: ""}
-
-
-  const [apiResponse, setApiResponse] = useState()
 
   const handleSave = async () => {
     try {
       // Send a POST request with the editorState data
-      const response = await axios.put(`${currentUrl}/api/users/1`, 
+      await axios.put(`${currentUrl}/api/users/1`, 
         html,
       );
-        setApiResponse(response)
 
-    //   console.log("response.data: ",response);
     } catch (error) {
-    //   console.error(error);
+      console.error(error);
     }
   };
-
-//   console.log("apiResponse: ",apiResponse)
-
 
   useEffect(()=> {
     editor.update(() => {
         const htmlString = $generateHtmlFromNodes(editor, null);
-        // console.log('htmlString', htmlString);
-        // setHtml({...html, biography: htmlString})
         html.biography = htmlString
-        // console.log(html)
     });
   },[editor, handleSave])
-
-
-  //created to save the editor to the server
-  const editorString = {biography : JSON.stringify(editor._editorState)}
-//   console.log(editor._editorState)
 
   const updateToolbar = React.useCallback(() => {
     const selection = $getSelection();
@@ -139,10 +117,6 @@ const Toolbar = () => {
       })
     );
   }, [updateToolbar, editor]);
-
-  // this save handler saved the editor State to the backend
-
-
 
   return (
     <div className="fixed z-20 shadow bottom-8 left-1/2 transform -translate-x-1/2 min-w-52 h-10 px-2 py-2 bg-[#1b2733] mb-4 space-x-2 flex items-center">
