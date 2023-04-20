@@ -6,8 +6,36 @@ import { addOnstage, getOnstage, deleteOnstage } from '../../actions/admin/onsta
 import { addVideo, getVideos, deleteVideo } from '../../actions/admin/videosActions.js';
 import AdminImages from './AdminImages.js';
 import AdminVideos from './AdminVideos.js';
-import Biography from './Biography.js';
+import '../../styles/admin/Dashboard.css';
+import { Editor } from './Editor';
+import Text from './Text.js';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import {
+  faBold,
+  faStrikethrough,
+  faItalic,
+  faUnderline,
+  faAlignLeft,
+  faAlignCenter,
+  faAlignRight,
+  faAlignJustify,
+  faRotateLeft,
+  faRotateRight,
+} from '@fortawesome/free-solid-svg-icons';
+import '../../styles/admin/Editor.css';
 
+library.add(
+  faBold,
+  faStrikethrough,
+  faItalic,
+  faUnderline,
+  faAlignLeft,
+  faAlignRight,
+  faAlignCenter,
+  faAlignJustify,
+  faRotateLeft,
+  faRotateRight
+);
 
 function Dashboard({
     user,
@@ -38,8 +66,9 @@ function Dashboard({
         getVideos(user_id)
     },[getHeadshots, getOnset, getOnstage, getVideos])
 
+
   return (
-    <div>
+    <div className='dashboard'>
         <h2>Headshots</h2>
         <AdminImages images={headshots} addImage={addHeadshot} user_id={user_id} deleteImage={deleteHeadshot}/>
         <h2>On Set</h2>
@@ -48,8 +77,9 @@ function Dashboard({
         <AdminImages images={onstage} addImage={addOnstage} user_id={user_id} deleteImage={deleteOnstage}/>
         <h2>Videos</h2>
         <AdminVideos videos={videos} addVideo={addVideo} user_id={user_id} deleteVideo={deleteVideo}/>
-        <h2>Biography</h2>
-        <Biography />
+        <h2>About</h2>
+        <Editor />
+        <Text />
     </div>
   )
 }

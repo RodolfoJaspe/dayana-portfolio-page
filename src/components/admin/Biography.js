@@ -1,46 +1,25 @@
-import React, { useState } from 'react'
+import React, { useEffect } from 'react'
 import { connect } from 'react-redux';
-import { addBiography } from '../../actions/admin/userActions';
+import { getBiography } from '../../actions/admin/userActions';
 import "../../styles/admin/Biography.css";
 
-function Biography({addBiography,user}) {
+function Biography({getBiography, biography}) {
 
-    const[biography, setBiography] = useState({
-        biography:""
-    });
-
-    const changeHandler = e => {
-        e.persist()
-        setBiography({[e.target.name]:e.target.value})
-    }
-
-    const submitForm = e => {
-        e.preventDefault()
-        addBiography(user.user_id, biography.biography)
-    }
+    useEffect(() => {
+        getBiography()
+    },[])
 
   return (
     <div>
-        <form onSubmit={submitForm} className='bio-form'>
-            <textarea 
-                placeholder='write bio here'
-                name="biography"
-                className='bio-textarea'
-                value={biography.biography}
-                onChange={changeHandler}
-                />
-            <button>
-                Save
-            </button>
-        </form>
+        {JSON.parse(biography)}
     </div>
   )
 }
 
 const mapStateToProps = state => {
     return {
-        user : state.userReducer
+        biography : state.userReducer.user.biography
     }
 }
 
-export default connect(mapStateToProps, {addBiography})(Biography)
+export default connect(mapStateToProps, {getBiography})(Biography)

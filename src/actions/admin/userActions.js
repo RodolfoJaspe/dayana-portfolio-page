@@ -62,15 +62,17 @@ export const userLogout = () => dispatch => {
 }
 
 export const addBiography = (user_id, biography) => dispatch => {
-    dispatch({type: ADD_BIOGRAPHY_START})
-    axios.put(`${currentUrl}/api/users/${user_id}`, {biography})
-        .then(res => {
-            console.log(res)
-            dispatch({type: ADD_BIOGRAPHY_SUCCESS, payload:res.data.biography})
-        })
-        .catch(err => {
-            dispatch({type: ADD_BIOGRAPHY_FAILURE, payload:err})
-        })
+    // dispatch({type: ADD_BIOGRAPHY_START})
+    // axios.put(`${currentUrl}/api/users/${user_id}`, {biography})
+    //     .then(res => {
+    //         console.log(res)
+    //         dispatch({type: ADD_BIOGRAPHY_SUCCESS, payload:res.data.biography})
+    //     })
+    //     .catch(err => {
+    //         dispatch({type: ADD_BIOGRAPHY_FAILURE, payload:err})
+    //     })
+    // dispatch({type: ADD_BIOGRAPHY_SUCCESS, payload: biography})
+    console.log("add biography")
 }
 
 export const getBiography = (user_id) => dispatch => {
