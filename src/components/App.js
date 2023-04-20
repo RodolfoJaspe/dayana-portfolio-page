@@ -10,7 +10,7 @@ import Reviews from './Reviews';
 function App() {
   return (
     <div className="App">
-        <Navbar />
+        {/* <Navbar /> */}
         <Home />
         <div className='main-content'>
             <About />
