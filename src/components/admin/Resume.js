@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { connect } from "react-redux";
 import { useParams } from 'react-router-dom';
 import { getResume, updateResume } from '../../actions/admin/userActions';
+import "../../styles/admin/Resume.css";
 
 
 function Resume({reducer_img, reducer_pdf, updateResume, getResume}) {
@@ -34,12 +35,12 @@ function Resume({reducer_img, reducer_pdf, updateResume, getResume}) {
             <input type='text' id='resume_img' name='resume_img' placeholder='resume image link' value={resume.resume_img} onChange={inputChanges}/>
             
             <input type='text' id='resume_pdf' name='resume_pdf' placeholder='resume pdf link' value={resume.resume_pdf} onChange={inputChanges}/>
-            
             <button>Add</button>
         </form>
-        <div>
-            <img src={reducer_img} alt='resume image'/>
-            <a href={reducer_pdf} target="_blank">Download</a>
+        <div className='resume_img_div'>
+            <img 
+                src={reducer_img} 
+                alt='resume image'/>
         </div>
     </div>
   )
