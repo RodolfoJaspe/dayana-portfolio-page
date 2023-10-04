@@ -1,8 +1,8 @@
-import { USER_LOGIN_START, USER_LOGIN_SUCCESS, USER_LOGIN_FAILURE, CLEAR_LOGIN_ERROR, USER_LOGOUT, ADD_BIOGRAPHY_START,ADD_BIOGRAPHY_SUCCESS,ADD_BIOGRAPHY_FAILURE, GET_BIOGRAPHY_SUCCESS, GET_BIOGRAPHY_FAILURE } from "../../actions/admin/userActions"
-import { GET_HEADSHOTS_START, GET_HEADSHOTS_SUCCESS, GET_HEADSHOTS_FAILURE, ADD_HEADSHOT_START, ADD_HEADSHOT_SUCCESS, ADD_HEADSHOT_FAILURE, DELETE_HEADSHOT_START, DELETE_HEADSHOT_SUCCESS, DELETE_HEADSHOT_FAILURE} from "../../actions/admin/headshotsActions.js";
-import { GET_ONSET_START, GET_ONSET_SUCCESS, GET_ONSET_FAILURE, ADD_ONSET_START, ADD_ONSET_SUCCESS, ADD_ONSET_FAILURE, DELETE_ONSET_START, DELETE_ONSET_SUCCESS, DELETE_ONSET_FAILURE } from "../../actions/admin/onsetActions";
-import { GET_ONSTAGE_START, GET_ONSTAGE_SUCCESS, GET_ONSTAGE_FAILURE, ADD_ONSTAGE_START, ADD_ONSTAGE_SUCCESS, ADD_ONSTAGE_FAILURE, DELETE_ONSTAGE_START, DELETE_ONSTAGE_SUCCESS, DELETE_ONSTAGE_FAILURE } from "../../actions/admin/onstageActions";
-import { GET_VIDEOS_START, GET_VIDEOS_SUCCESS, GET_VIDEOS_FAILURE, ADD_VIDEO_START, ADD_VIDEO_SUCCESS, ADD_VIDEO_FAILURE, DELETE_VIDEO_START, DELETE_VIDEO_SUCCESS, DELETE_VIDEO_FAILURE } from "../../actions/admin/videosActions";
+import { ADD_HEADSHOT_FAILURE, ADD_HEADSHOT_START, ADD_HEADSHOT_SUCCESS, DELETE_HEADSHOT_FAILURE, DELETE_HEADSHOT_START, DELETE_HEADSHOT_SUCCESS, GET_HEADSHOTS_FAILURE, GET_HEADSHOTS_START, GET_HEADSHOTS_SUCCESS } from "../../actions/admin/headshotsActions.js";
+import { ADD_ONSET_FAILURE, ADD_ONSET_START, ADD_ONSET_SUCCESS, DELETE_ONSET_FAILURE, DELETE_ONSET_START, DELETE_ONSET_SUCCESS, GET_ONSET_FAILURE, GET_ONSET_START, GET_ONSET_SUCCESS } from "../../actions/admin/onsetActions";
+import { ADD_ONSTAGE_FAILURE, ADD_ONSTAGE_START, ADD_ONSTAGE_SUCCESS, DELETE_ONSTAGE_FAILURE, DELETE_ONSTAGE_START, DELETE_ONSTAGE_SUCCESS, GET_ONSTAGE_FAILURE, GET_ONSTAGE_START, GET_ONSTAGE_SUCCESS } from "../../actions/admin/onstageActions";
+import { ADD_BIOGRAPHY_FAILURE, ADD_BIOGRAPHY_START, ADD_BIOGRAPHY_SUCCESS, CLEAR_LOGIN_ERROR, GET_BIOGRAPHY_FAILURE, GET_BIOGRAPHY_SUCCESS, GET_RESUME_SUCCESS, UPDATE_RESUME_SUCCESS, USER_LOGIN_FAILURE, USER_LOGIN_START, USER_LOGIN_SUCCESS, USER_LOGOUT } from "../../actions/admin/userActions";
+import { ADD_VIDEO_FAILURE, ADD_VIDEO_START, ADD_VIDEO_SUCCESS, DELETE_VIDEO_FAILURE, DELETE_VIDEO_START, DELETE_VIDEO_SUCCESS, GET_VIDEOS_FAILURE, GET_VIDEOS_START, GET_VIDEOS_SUCCESS } from "../../actions/admin/videosActions";
 
 const user = {
     user_id : "",
@@ -16,7 +16,11 @@ const user = {
             onset : [],
             onstage : []
         },
-        videos : []
+        videos : [],
+        resume : {
+            resume_img : "",
+            resume_pdf : ""
+        }
     }
 }
 
@@ -118,6 +122,12 @@ export const userReducer = ( state = user, action ) => {
             return {...state, biography: action.payload, loading: false};
         case GET_BIOGRAPHY_FAILURE:
             return {...state, loading: false}
+        case UPDATE_RESUME_SUCCESS:
+            return {...state, loading: false, media: {...state.media, resume : {...state.media.resume, resume_img : action.payload.resume_img, resume_pdf: action.payload.resume_pdf}}}
+        case GET_RESUME_SUCCESS:
+            console.log(action.payload)
+            return {...state, loading: false, media: {...state.media, resume : {...state.media.resume, resume_img : action.payload.resume_img, resume_pdf: action.payload.resume_pdf}}}
+
         default:
             return state;
     }

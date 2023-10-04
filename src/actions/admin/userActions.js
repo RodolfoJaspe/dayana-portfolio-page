@@ -19,6 +19,9 @@ export const ADD_BIOGRAPHY_FAILURE = "ADD_BIOGRAPHY_FAILURE";
 export const GET_BIOGRAPHY_SUCCESS = "GET_BIOGRAPHY_SUCCESS";
 export const GET_BIOGRAPHY_FAILURE = "GET_BIOGRAPHY_FAILURE";
 
+export const UPDATE_RESUME_SUCCESS = "UPDATE_RESUME_SUCCESS";
+export const GET_RESUME_SUCCESS = "GET_RESUME_SUCCESS";
+
 const headers = {
     Accept: "application/json"
 }
@@ -84,5 +87,24 @@ export const getBiography = (user_id) => dispatch => {
             dispatch({type: GET_BIOGRAPHY_FAILURE, payload: err.message})
         })  
 }
+
+export const updateResume = (resume, id) => dispatch => {
+    axios.put(`${currentUrl}/api/users/${id}/resume`, {resume}).then(res => {
+        console.log(res)
+        dispatch({type: UPDATE_RESUME_SUCCESS, payload: res.data})
+    }).catch(err => {
+        console.log(err)
+    })
+}
+
+export const getResume = (id) => dispatch => {
+    axios.get(`${currentUrl}/api/users/${id}`).then(res => {
+        console.log(res)
+        dispatch({type: GET_RESUME_SUCCESS, payload: res.data})
+    }).catch(err => {
+        console.log(err)
+    })
+}
+
 
 

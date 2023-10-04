@@ -1,3 +1,3 @@
-const localUrl = "http://localhost:5000";
+const localUrl = "http://localhost:5001";
 const productionUrl = "https://dayana-portfolio-production.up.railway.app";
-export const currentUrl = productionUrl
+export const currentUrl = localUrl

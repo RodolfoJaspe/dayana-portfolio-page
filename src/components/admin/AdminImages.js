@@ -1,5 +1,4 @@
-import React,{useState} from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from 'react';
 import "../../styles/admin/AdminImages.css";
 
 export default function AdminImages({images, addImage, deleteImage, user_id}) {
@@ -37,7 +36,7 @@ export default function AdminImages({images, addImage, deleteImage, user_id}) {
         </div>
         <div className='admin-image-list'>
             {images?images.map(image => (
-                <div className='image-div'>
+                <div className='image-div' key={image.title}>
                     <img src={image.url} alt={image.title}/>
                     <button onClick={()=>deleteImage(image.id)}>Delete</button>
                 </div>

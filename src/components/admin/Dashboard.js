@@ -1,27 +1,28 @@
-import React, { useEffect } from 'react';
-import { connect } from 'react-redux';
-import { addHeadshot, getHeadshots, deleteHeadshot } from '../../actions/admin/headshotsActions.js';
-import { addOnset, getOnset, deleteOnset } from '../../actions/admin/onsetActions.js';
-import { addOnstage, getOnstage, deleteOnstage } from '../../actions/admin/onstageActions.js';
-import { addVideo, getVideos, deleteVideo } from '../../actions/admin/videosActions.js';
-import AdminImages from './AdminImages.js';
-import AdminVideos from './AdminVideos.js';
-import '../../styles/admin/Dashboard.css';
-import { Editor } from './Editor';
-import Text from './Text.js';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import {
-  faBold,
-  faStrikethrough,
-  faItalic,
-  faUnderline,
-  faAlignLeft,
-  faAlignCenter,
-  faAlignRight,
-  faAlignJustify,
-  faRotateLeft,
-  faRotateRight,
+    faAlignCenter,
+    faAlignJustify,
+    faAlignLeft,
+    faAlignRight,
+    faBold,
+    faItalic,
+    faRotateLeft,
+    faRotateRight,
+    faStrikethrough,
+    faUnderline,
 } from '@fortawesome/free-solid-svg-icons';
+import React, { useEffect } from 'react';
+import { connect } from 'react-redux';
+import { addHeadshot, deleteHeadshot, getHeadshots } from '../../actions/admin/headshotsActions.js';
+import { addOnset, deleteOnset, getOnset } from '../../actions/admin/onsetActions.js';
+import { addOnstage, deleteOnstage, getOnstage } from '../../actions/admin/onstageActions.js';
+import { addVideo, deleteVideo, getVideos } from '../../actions/admin/videosActions.js';
+import '../../styles/admin/Dashboard.css';
+import AdminImages from './AdminImages.js';
+import AdminVideos from './AdminVideos.js';
+import { Editor } from './Editor';
+import Resume from './Resume.js';
+import Text from './Text.js';
 
 library.add(
   faBold,
@@ -77,6 +78,7 @@ function Dashboard({
         <h2>Videos</h2>
         <AdminVideos videos={videos} addVideo={addVideo} user_id={user_id} deleteVideo={deleteVideo}/>
         <h2>About</h2>
+        <Resume />
         <Editor />
         <Text />
     </div>
