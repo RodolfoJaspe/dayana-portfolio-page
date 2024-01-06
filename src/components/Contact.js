@@ -1,11 +1,11 @@
-import React, { useState, useRef } from 'react'
-import '../styles/Contact.css';
-import ImagePopup from './ImagePopup';
-import {pageImages} from "../Assets/images.js";
-import "../styles/ImagePopup.css";
 import emailjs from '@emailjs/browser';
-import insta from "../Assets/icons/insta.png";
+import React, { useRef, useState } from 'react';
 import facebook from "../Assets/icons/fb.png";
+import insta from "../Assets/icons/insta.png";
+import { pageImages } from "../Assets/images.js";
+import '../styles/Contact.css';
+import "../styles/ImagePopup.css";
+import ImagePopup from './ImagePopup';
 
 function Contact() {
     const [ImgPopup, setImgPopup] = useState(false)
@@ -27,7 +27,7 @@ function Contact() {
     const sendEmail = (e) => {
         e.preventDefault();
 
-        emailjs.sendForm('service_h6yxzhl', 'template_496smvb', form.current, 'cY7LThc4skVPB9RcW')
+        emailjs.sendForm('service_h6yxzhl', 'template_496smvb', form.current, '3fjWoU26gcULc4m0c')
         .then((result) => {
             console.log(result.text);
         }, (error) => {
