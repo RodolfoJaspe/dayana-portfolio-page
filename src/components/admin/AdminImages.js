@@ -11,10 +11,7 @@ export default function AdminImages({images, addImage, deleteImage, user_id}) {
 
     const formSubmit = e => {
         e.preventDefault()
-        console.log(newImage)
-        addImage({...newImage,
-            url: `https://drive.google.com/uc?export=view&id=${newImage.url}`
-        })
+        addImage(newImage)
     }
 
     const inputChanges = e => {
