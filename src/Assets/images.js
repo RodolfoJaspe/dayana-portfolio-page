@@ -1,12 +1,11 @@
 export const pageImages =[
     {   id: 1,
         title: "Background Headshot",
-        url: "https://lh3.googleusercontent.com/pw/ABLVV84fY7fjtg_EBCldY0vYpZy2pbssc73pIcpxHTKxlrpxoqIC3YbhiSLv1LZmxfi13ROqNswhk12Z61dnVpmm5IwBFo58tdJaYG1AwCD6_93BJ40LjtR6agzTir35U9momzzbjaDZKaLa6bsgZBcKc5jq=w2664-h2130-s-no-gm?authuser=0"},
+        url: "https://lh3.googleusercontent.com/pw/AP1GczMK-ocUPMtyj0Vb3t5EmTjXgzYfZQGA_XDXYoeej0y3op3mpw40tI8zhN_04hRGhJVk9jaytYsOc_j2tn1rzVWBL1tIDBo7mkWDFih832_IKOwr4mIt2JcuomvQnkrO-yBBRHBm71VN-l3cUCstKu7j=w2196-h2130-s-no-gm?authuser=0"},
     {   id: 2,
         title: "About Headshot",
-        url: "https://lh3.googleusercontent.com/pw/ABLVV86V2VAZX7-uT6fG8hU7pEgGhrWJALCt_nzB77N3ZWfdPbLp1XmqmZ__2dfmZRmklymLhkzk9M8qUc4ovU8g7tjukj_A4Z8rbnRlrImaIRgI-mXnzTT_MD4KbOHkWMMQQshFH3UqX7KCqm2zg9hJ6aTm=w1704-h2130-s-no-gm?authuser=0"},
+        url: "https://lh3.googleusercontent.com/pw/AP1GczOwu3XJLlcJVsBsGUGH-LZHvXUKqoI7RLHmZq_W0LS47WrvDhScT51wzlAqqH0O0EJxBYLImb55OkcrXsiDHUl86ElgiEdUX5ExGxFFtFOhhoUmKDBo1PVOKDSB_0an_ZvjjOeAm_Lq7PHPFkU69vQC=w1390-h2130-s-no-gm?authuser=0"},
     {   id: 3,
         title: "Contact Headshot",
-        url: "https://lh3.googleusercontent.com/pw/ABLVV85i1DyohQiiz1iB9vyLsTU7sQW7EeXGsiOlOU77YzgWRz0oen6WMSmFtD9ib0bpyDCSN8FiG0janalLU9odYQFboVzMhWoZAoajWLGmT3ZvcPve5fwbeeuODc0Js3Gjty14PRXpIzF45hGT15RlChpm=w1704-h2130-s-no-gm?authuser=0"},
+        url: "https://lh3.googleusercontent.com/pw/AP1GczOIy-eLjJq5AmRmXp3IpWk5EdylbWBN5_qKxEJcYiT_Mk3rFmzM6kZDU0v8rwOl9Mwg7LXc49xjWGhCf-12VSbDlIC8CuqHvmEzuKov2RgZlPgTIZiWO8gzhKwH_V2_xyNX9neXkglf5_YRwI4_zmku=w1420-h2130-s-no-gm?authuser=0"},
     ];
-    

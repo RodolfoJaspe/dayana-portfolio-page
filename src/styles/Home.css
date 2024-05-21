@@ -1,11 +1,13 @@
 .home{
-    height:100vh;
+    height:112vh;
     width:100%;
     display:flex;
     object-fit: cover;
     justify-content: center;
     align-items: flex-start;
-    background-color: rgba(0, 10, 24, 0.307);
+    /* background-color: rgba(38, 21, 28, 0.329); */
+    background-color: rgba(83, 55, 55, 0.294);
+
 }
 
 .home img {

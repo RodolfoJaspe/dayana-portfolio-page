@@ -5,7 +5,6 @@ import insta from "../Assets/icons/insta.png";
 import { pageImages } from "../Assets/images.js";
 import '../styles/Contact.css';
 import "../styles/ImagePopup.css";
-import ImagePopup from './ImagePopup';
 
 function Contact() {
     const [ImgPopup, setImgPopup] = useState(false)
@@ -68,9 +67,8 @@ function Contact() {
             </div>
         </div>
         <div className='headshot-div'>
-          <img onClick={() => triggerPopup(headshot)}src={headshot.url} alt='headshot' />  
+          <img className='headshot-img' onClick={() => triggerPopup(headshot)}src={headshot.url} alt='headshot'/>  
         </div>
-        {ImgPopup?<ImagePopup popup={ImgPopup} setPopup={setImgPopup} image={popupImage}/>:null}
     </div>
   )
 }

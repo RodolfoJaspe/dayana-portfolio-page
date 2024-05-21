@@ -1,10 +1,11 @@
-import React from 'react'
+import React from 'react';
+import { pageImages } from "../Assets/images.js";
 import '../styles/Home.css';
-import {pageImages} from "../Assets/images.js";
 
 function Home() {
 
     const image = pageImages.find(image => image.id === 1)
+    console.log(image)
   return (
     <div className='home'>
         <img src={image.url} alt="drive image"/>

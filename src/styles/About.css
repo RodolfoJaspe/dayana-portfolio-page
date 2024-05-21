@@ -1,30 +1,30 @@
 .about{
     width:100vw;
-    /* height: 50vh; */
-    height: 100%;
     display:flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #333d4b;
-    margin-bottom: 15vh
+    align-items:flex-end;
+    justify-content: space-evenly;
+    background-color: rgba(90, 167, 192, .181);
+    margin-bottom: 15vh;
 }
 
 .resume-button {
     padding: .5rem 1rem;
     font-size: .8rem;
     border: none;
-    background-color: white;
-    border: 1px solid black;
+    background-color: rgb(177, 118, 118);
+    border: 1px solid white;
     cursor:pointer;
-    color: black;
+    color: white;
     transition: .2s;
     margin-bottom: 20px;
+    border-radius: 10px;
 }
 
 .resume-button:hover {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: white;
     transition: .2s;
+    color: rgb(177, 118, 118);
+    border: 1px solid rgb(177, 118, 118);
 }
 
 .download-resume-outer {
@@ -59,68 +59,104 @@
     width: 30px;
 }
 
-.about .headshot-div {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.about-headshot{
+    width: 400px;
+    float:right;
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
 
-.about .headshot-div img {
-    cursor: pointer;
-    height: 50vh;
-}
-
-.banner-about-div{
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    color: white;
+.about-banner-div{
+    color: rgb(177, 118, 118);
     line-height: 1.5rem;
-    width: 75%;
+    width: 98vw;
+    text-align: center;
+    position: relative;
+}
+.about-banner-div .text-outer {
+    width: 100%;
+    height: 100%;
 }
 
-.banner-about-div p{
+.about-banner-div .text-outer p{
+    /* padding: 0 1vw; */
+    text-align: justify !important;
+}
+
+.about-banner-div .text-outer p:first-child {
+    padding-right: 400px;
+}
+.about-banner-div .text-outer p:last-child {
+    padding-right: 400px;
+}
+
+.about-banner-div p{
     font-size: 1.3rem;
     line-height: 1.3;
     margin-top: 0;
+    /* width: 100%; */
 }
 
-/* @media(max-width: 1650px){
-    .about {
-        height:55vh;
+/* @media(max-width:1800px) {
+    .about-banner-div .text-outer p:first-child {
+        padding-right: 360px;
+    }
+    .about-banner-div .text-outer p:last-child {
+        padding-right: 360px;
     }
 } */
 
 @media(max-width:1510px){
-    .banner-about-div p{
+    .about-banner-div p{
         font-size: 1.1rem;
     }
-}
-
-@media (max-width:1232px) {
-    .about .headshot-div img {
-        height: 40vw;
-        transform: translateX(-10px);
+    /* .about-headshot {
+        width: 22vw;
+    } */
+    .about-headshot{
+        width: 380px;
     }
 }
 
-@media(max-width:1000px){
-    .about{
-        height: 100%;
+@media(max-width:900px){
+    .about-banner-div .text-outer p:first-child {
+        padding: 0 20px;
+    }
+    .about-banner-div .text-outer p:last-child {
+        padding-right: 240px;
+        padding-left: 20px;
+    }
+    .about-headshot {
+        width: 200px;
+    }
+}
+@media(max-width:750px){
+    .about-headshot {
+        width: 250px;
     }
 }
 
-@media(max-width: 800px){
-    .about{
-        justify-content: center;
+@media(max-width: 604px){
+    .about-banner-div .text-outer p:last-child {
+        margin-bottom: 90px;
+        padding-right: 20px;
+
     }
-    .headshot-div img {
+    .about-headshot {
+        width: 28vw;
+    }
+    .resume-button{
+        margin-bottom: 90px;
+    }
+}
+@media(max-width: 493px){
+    .about-headshot {
+        width: 31vw;
+    }
+}
+@media(max-width: 365px){
+    .about-headshot {
         width: 0;
-    }
-    .banner-about-div {
-        width: 98%;
     }
 }

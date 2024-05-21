@@ -8,6 +8,10 @@
     font-size: larger;
 }
 
+.reviews a {
+    color: rgba(90, 167, 192, 0.885);
+}
+
 @media(max-width: 1200px) {
     .reviews{
         width: 60%;
