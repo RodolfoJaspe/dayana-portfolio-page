@@ -87,6 +87,9 @@
 .about-banner-div .text-outer p:first-child {
     padding-right: 400px;
 }
+.about-banner-div .text-outer p:nth-child(2) {
+    padding-right: 400px;
+}
 .about-banner-div .text-outer p:last-child {
     padding-right: 400px;
 }
@@ -123,6 +126,10 @@
     .about-banner-div .text-outer p:first-child {
         padding: 0 20px;
     }
+    .about-banner-div .text-outer p:nth-child(2) {
+        padding-right: 200px;
+        padding-left: 20px;
+    }
     .about-banner-div .text-outer p:last-child {
         padding-right: 240px;
         padding-left: 20px;
@@ -135,19 +142,24 @@
     .about-headshot {
         width: 250px;
     }
+    .about-banner-div .text-outer p:last-child {
+        padding-right: 200px;
+    }
 }
 
 @media(max-width: 604px){
     .about-banner-div .text-outer p:last-child {
         margin-bottom: 90px;
-        padding-right: 20px;
-
     }
     .about-headshot {
         width: 28vw;
     }
     .resume-button{
         margin-bottom: 90px;
+    }
+    .about-banner-div .text-outer p:nth-child(2) {
+        padding-right: 20px;
+        padding-left: 20px;
     }
 }
 @media(max-width: 493px){
@@ -158,5 +170,8 @@
 @media(max-width: 365px){
     .about-headshot {
         width: 0;
+    }
+    .about-banner-div .text-outer p:last-child {
+        padding-right: 20px;
     }
 }
