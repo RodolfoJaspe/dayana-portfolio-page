@@ -143,13 +143,14 @@
         width: 250px;
     }
     .about-banner-div .text-outer p:last-child {
-        padding-right: 200px;
+        padding-right: 300px;
     }
 }
 
 @media(max-width: 604px){
     .about-banner-div .text-outer p:last-child {
         margin-bottom: 90px;
+        padding-right: 200px;
     }
     .about-headshot {
         width: 28vw;
