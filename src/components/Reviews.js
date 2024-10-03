@@ -5,14 +5,19 @@ export default function Reviews() {
   return (
     <div className='reviews'>
         <p>
-            “It’s easy to fall in love with bi-lingual star of stage and screen (and popular South Florida thespian) Dayana Morales in her role as Viola…” <br/><br/>
+            “Dayana Morales wows the audience as the all-knowing, wise Big Sister…” <br/><br/>
 
-            <i>-Mindy Leaf, <a className='review-link' href='https://southfloridatheater.com/2024/03/13/refuge-or-rejection-the-1000-miles-experience/' target='_blank'>South Florida Theater </a></i> 
+            <i>-Samara Smukler, <a className='review-link' href='https://southfloridatheater.com/2024/09/18/theatre-labs-the-little-mermaid-is-a-creative-twist-on-the-classic-tale/' target='_blank'>South Florida Theater </a></i> 
         </p><br/>
         <p>
             “Morales is a promising find who also dives completely into the character of this modern young woman with a plucky spirit and an independent mind” <br/><br/>
 
             <i>-Bill Hirschman, <a className='review-link' href='http://www.floridatheateronstage.com/reviews/theatre-labs-red-riding-hood-entertains-more-than-just-kids/' target='_blank'>Florida Theater on Stage </a></i> 
+        </p><br/>
+        <p>
+            “It’s easy to fall in love with bi-lingual star of stage and screen (and popular South Florida thespian) Dayana Morales in her role as Viola…” <br/><br/>
+
+            <i>-Mindy Leaf, <a className='review-link' href='https://southfloridatheater.com/2024/03/13/refuge-or-rejection-the-1000-miles-experience/' target='_blank'>South Florida Theater </a></i> 
         </p><br/>
         <p>
             “...It is the winsome Morales, who steals the show. As the stagestruck Delivery Person, she soon throws herself into full-throttle performance mode with evident glee.” <br/><br/>
