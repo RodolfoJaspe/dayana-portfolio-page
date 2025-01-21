@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import {Link} from 'react-scroll'
+import React, { useState } from 'react';
+import { Link } from 'react-scroll';
 import '../styles/Navbar.css';
 
 
@@ -13,21 +13,24 @@ function Navbar() {
   return (
     <div className='navbar'>
         <div className={click ? "nav-menu active" : "nav-menu"}>
-            <div>
+            {/* <div>
                 <Link to='home' className='nav-item' onClick={closeMenu} spy={true} smooth={true} offset={-300} duration={500}>Home</Link>
+            </div> */}
+            <div>
+                <Link to='about' className='nav-item' onClick={closeMenu} spy={true} smooth={true} offset={-300} duration={500}>ABOUT</Link>
             </div>
             <div>
-                <Link to='about' className='nav-item' onClick={closeMenu} spy={true} smooth={true} offset={-300} duration={500}>About</Link>
+                <Link to='gallery' className='nav-item' onClick={closeMenu} spy={true} smooth={true} offset={-100} duration={500}>GALLERY</Link>
             </div>
             <div>
-                <Link to='gallery' className='nav-item' onClick={closeMenu} spy={true} smooth={true} offset={-300} duration={500}>Gallery</Link>
+                <Link to='videos' className='nav-item' onClick={closeMenu} spy={true} smooth={true} offset={-100} duration={500}>REELS</Link>
             </div>
             <div>
-                <Link to='videos' className='nav-item' onClick={closeMenu} spy={true} smooth={true} offset={-400} duration={500}>Videos</Link>
+                <Link to='contact' className='nav-item' onClick={closeMenu} spy={true} smooth={true} offset={-500} duration={500}>CONTACT</Link>
             </div>
-            <div>
-                <Link to='contact' className='nav-item' onClick={closeMenu} spy={true} smooth={true} offset={-500} duration={500}>Contact</Link>
-            </div>
+        </div>
+        <div className='email'>
+            <p>dayanamorales.actress@gmail.com</p>
         </div>    
     </div>
   )

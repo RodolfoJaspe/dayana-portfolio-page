@@ -3,13 +3,14 @@ import About from './About';
 import Contact from './Contact';
 import Gallery from './Gallery';
 import Home from './Home';
+import Navbar from './Navbar';
 import Reviews from './Reviews';
 import Videos from './Videos';
 
 function App() {
   return (
     <div className="App">
-        {/* {window.innerWidth > 600 ? <Navbar />: null} */}
+        {window.innerWidth > 300 ? <Navbar />: null}
         <Home />
         <div className='main-content'>
             <About />

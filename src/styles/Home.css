@@ -1,6 +1,6 @@
 .home{
     height:122vh;
-    width:100%;
+    width:100vw;
     display:flex;
     object-fit: cover;
     justify-content: center;
